@@ -4,7 +4,7 @@ import { Element } from 'components/element';
 
 import './List.css';
 
-const List = ({ todos, check_action, delete_action }) => (
+const List = ({ todos, check_action, delete_action, update_action }) => (
     <Fragment>
         <ul className="todos__list no-bullet">
         {
@@ -15,6 +15,7 @@ const List = ({ todos, check_action, delete_action }) => (
                         element={ todo } 
                         check_action={ () => check_action(todo.id) }
                         delete_action={ () => delete_action(todo.id) }
+                        update_action={ () => update_action(todo) }
                     />
                 )) :
                 <div className="text-center">

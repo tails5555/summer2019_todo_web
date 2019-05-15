@@ -1,0 +1,9 @@
+.alert__main {
+    padding: 1em;
+}
+
+.list__center {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
