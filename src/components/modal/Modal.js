@@ -1,17 +1,18 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
-class Modal extends PureComponent {
-    constructor(props){
-        super(props);
-        this.state = { };
-    }
+import './Modal.css';
 
-    render(){
-        return (
-            <Fragment>
-            </Fragment>
-        );
-    }
-};
+const Modal = ({ show, children, close_action }) => (
+    <Fragment>
+        <div className={ `modal ${ show ? 'display-block' : 'display-none' }` }>
+            <section className="modal__main">
+                { children }
+                <button className="button alert expanded" onClick={ close_action }>
+                    <i className="fas fa-times" /> 닫기
+                </button>
+            </section>
+        </div>
+    </Fragment>
+);
 
 export default Modal;

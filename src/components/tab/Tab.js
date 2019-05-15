@@ -1,17 +1,23 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
-class Tab extends PureComponent {
-    constructor(props){
-        super(props);
-        this.state = { };
-    }
+import './Tab.css';
 
-    render(){
-        return (
-            <Fragment> 
-            </Fragment>
-        );
-    }
-}
+const Tab = ({ options, condition, condition_change_action }) => (
+    <Fragment>
+        <div className="tab__group">
+        {
+            options.map(option => (
+                <button 
+                    key={option.value} 
+                    className={ condition === option.value ? "button small" : "button warning small" } 
+                    onClick={ () => condition_change_action(option) }
+                >
+                    { condition === option.value ? <i className="fas fa-check" /> : null } { option.label }
+                </button>
+            ))
+        }
+        </div>
+    </Fragment>
+);
 
 export default Tab;
