@@ -116,7 +116,7 @@ class TodoListView extends PureComponent {
     _handle_click_selected = (todo) => {
         const { selected } = this.state;
         this.setState({
-            selected: (todo === null) ? selected : { ...todo, deadline: moment(todo.deadline).format('YYYY-MM-DDTHH:mm:ss') },
+            selected: (todo === null) ? selected : { ...todo, deadline: todo.deadline ? moment(todo.deadline).format('YYYY-MM-DDTHH:mm:ss') : '' },
             select_modal: true
         });
     }
@@ -157,7 +157,7 @@ class TodoListView extends PureComponent {
                     window.location.href = '/';
                 }
             }).catch(error => {
-                console.log(error.response);
+                alert('서버 측에서 데이터 오류가 있습니다. 다시 시도 바랍니다.');
             });
         } else {
             axios({
@@ -174,9 +174,8 @@ class TodoListView extends PureComponent {
                     alert(message);
                     window.location.href = '/';
                 }
-                console.log(res);
             }).catch(error => {
-                console.log(error.response);
+                alert('서버 측에서 데이터 오류가 있습니다. 다시 시도 바랍니다.');
             });
         }
     }
