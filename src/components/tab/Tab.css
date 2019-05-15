@@ -1,0 +1,4 @@
+.tab__group {
+    display: flex;
+    justify-content: space-around;
+}
