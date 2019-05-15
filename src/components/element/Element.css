@@ -23,8 +23,8 @@
 
 .todos__item__toggle--completed {
     text-decoration: line-through;
-    background-color: rgba(0,128,0,0.15);
-    border-color: rgba(0,128,0,0.2);
+    background-color: rgba(0,192,0,0.15);
+    border-color: rgba(0,192,0,0.2);
 }
 
 .todos__item__toggle--completed:hover {

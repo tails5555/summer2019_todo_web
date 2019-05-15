@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import './Element.css';
 
-const Element = ({ element, check_action }) => (
+const Element = ({ element, check_action, delete_action }) => (
     <Fragment>
         <li className="todos__item">
             <div className={ `todos__item__toggle ${ element.completed ? "todos__item__toggle--completed" : '' }` } onClick={ check_action }>
@@ -22,8 +22,8 @@ const Element = ({ element, check_action }) => (
                 <button className="button info">
                     <i className="fas fa-edit" />
                 </button>
-                <button className="button alert">
-                    <i className="fas fa-times" />
+                <button className="button alert" onClick={ delete_action }>
+                    <i className="fas fa-trash" />
                 </button>
             </div>
         </li>
