@@ -1,0 +1,50 @@
+.todos__item {
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+.todos__item p {
+    margin: 0.1em;
+}
+
+.todos__item__toggle {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0.85em 2.25em 0.85em 1em;
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.todos__item__toggle:hover {
+    background-color: rgba(0,0,0,0.1);
+    border-color: rgba(0,0,0,0.15);
+}
+
+.todos__item__toggle--completed {
+    text-decoration: line-through;
+    background-color: rgba(0,128,0,0.15);
+    border-color: rgba(0,128,0,0.2);
+}
+
+.todos__item__toggle--completed:hover {
+    background-color: rgba(0,128,0,0.25);
+    border-color: rgba(0,128,0,0.3);
+}
+
+.todos__item__priority {
+    color: #F1C40F;
+}
+
+.todos__item__button {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.todos__item__button i {
+    vertical-align: middle;
+}
