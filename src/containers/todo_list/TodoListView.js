@@ -120,7 +120,7 @@ class TodoListView extends PureComponent {
 
     // TODO 데이터를 삭제하고, 서버 측에서 통신한 결과에 따라 리-렌더링을 진행합니다.
     _handle_click_deleted = (pk) => {
-        TODO_DELETE_API
+        TODO_DELETE_API(pk)
             .then(res => {
                 if(res.status === 200){
                     const { todos } = this.state;
