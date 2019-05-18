@@ -64,7 +64,7 @@ npm Dependencies 는 다음과 같은 라이브러리가 들어 있습니다.
 
 배포 환경은 AWS S3 정적 웹페이지를 사용하였습니다.
 
-그리고 서버는 Spring Boot (AWS Elastic Beanstalk 에 저장된 Tomcat WAR 파일) 와 접속 되어 있습니다.
+그리고 서버는 Python Anywhere 으로 django REST Framework Application 을 배포했습니다.
 
 ## Execute This Project
 
