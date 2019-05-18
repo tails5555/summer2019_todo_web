@@ -1,0 +1,1 @@
+export const BASE_URL = 'http://tails5555.pythonanywhere.com';

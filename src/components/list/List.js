@@ -4,6 +4,7 @@ import { Element } from 'components/element';
 
 import './List.css';
 
+// TODO 데이터들을 렌더링할 컴포넌트.
 const List = ({ todos, check_action, delete_action, update_action }) => (
     <Fragment>
         <ul className="todos__list no-bullet">

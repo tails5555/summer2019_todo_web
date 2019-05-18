@@ -3,6 +3,7 @@ import React, { PureComponent, Fragment } from 'react';
 import moment from 'moment';
 import SimpleReactValidator from 'simple-react-validator';
 
+// 중요도 데이터
 const PriorityOptions = [
     { value: '1', label: '사소' },
     { value: '2', label: '여유' },
@@ -11,12 +12,15 @@ const PriorityOptions = [
     { value: '5', label: '위급' }
 ];
 
+// Input Field 를 렌더링할 컴포넌트.
 class Form extends PureComponent {
     constructor(props){
         super(props);
         this.validator = new SimpleReactValidator();
     }
 
+    // 입력을 다 하고, 클라이언트 측에서 유효성 검사를 진행합니다.
+    // 유효성 확인이 완료되면 서버에게 저장 요청을 보낼 수 있습니다.
     _handle_submit = () => {
         const { save_action, todo_form } = this.props; 
         if(this.validator.allValid()){
