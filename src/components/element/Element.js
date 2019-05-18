@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 
 import './Element.css';
 
+// TODO 데이터를 렌더링할 컴포넌트.
+// TODO 체크는 회색 화면을 클릭해야 진행할 수 있습니다.
 const Element = ({ element, check_action, delete_action, update_action }) => (
     <Fragment>
         <li className="todos__item">
