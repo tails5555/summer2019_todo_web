@@ -2,11 +2,12 @@ import React, { Fragment } from 'react';
 
 import './Alert.css';
 
+// 알림창을 렌더링할 컴포넌트.
 const Alert = ({ alert }) => (
     <Fragment>
         <div className="alert__main">
             <div className="text-center">
-                <h1 className="text-center fas fa-bell" />
+                <i className="text-center fas fa-bell first__icon"></i>
                 <h3>{ alert && alert.alert_message }</h3>
             </div>
             <ul className="list__center">
